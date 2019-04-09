@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router } from 'react-router-dom';
 import history from './components/history';
+import NavBar from './components/navbar';
 import Routes from './components/routes';
 
 class App extends Component {
@@ -8,7 +9,10 @@ class App extends Component {
     return(
       <React.Fragment>
         <Router history={history}>
-          <Routes />
+          <React.Fragment>
+            <NavBar />
+            <Routes />
+          </React.Fragment>
         </Router>
       </React.Fragment>
     );
