@@ -1,27 +1,31 @@
 import React from 'react';
-import { Nav, NavItem, NavLink } from 'shards-react';
-
+import {
+    Navbar,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink
+  } from 'shards-react';
+  
 function NavBar() {
-    return(
-        <Nav pills>
-            <NavItem>
-                <NavLink active href="#">
-                Active
-                </NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#">Link</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#">Another Link</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink disabled href="#">
-                    Disabled Link
-                </NavLink>
-            </NavItem>
-        </Nav>
-    );
+  return (
+    <Navbar type="dark" theme="primary" expand="md">
+      <NavbarBrand href="/">Setter Analytics UI</NavbarBrand>
+
+      <Nav navbar>
+        <NavItem>
+        <NavLink active href="/geographic-segmentation">
+            Home
+        </NavLink>
+        </NavItem>
+        <NavItem>
+        <NavLink href="#" disabled>
+            Geographic Segmentation
+        </NavLink>
+        </NavItem>
+      </Nav>
+    </Navbar>
+  );
 }
 
 export default NavBar;
